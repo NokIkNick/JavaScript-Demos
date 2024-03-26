@@ -48,9 +48,6 @@ function myMap(array, callback){
     return result;
 }
 
-
-//1.3
-
 Array.prototype.myFilter = function(callback){
     let result = [];
     for(let i = 0; i < this.length; i++){
@@ -77,3 +74,21 @@ newFilteredArray.forEach(console.log);
 
 newMappedArray.forEach(console.log);
 
+
+//1.3
+
+const divCollection = document.getElementsByTagName("DIV");
+console.log(divCollection.length);
+const divArray = Array.from(divCollection);
+divArray.forEach(console.log);
+
+for(let i = 0; i < divCollection.length; i++){
+    divCollection[i].style.backgroundColor = "red";
+}
+
+const clickButton = document.getElementById("clickButton");
+clickButton.addEventListener('click', () => {
+    divCollection[0].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+    divCollection[1].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+    divCollection[2].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+})
