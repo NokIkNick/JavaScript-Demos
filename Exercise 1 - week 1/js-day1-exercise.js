@@ -88,7 +88,7 @@ for(let i = 0; i < divCollection.length; i++){
 
 const clickButton = document.getElementById("clickButton");
 clickButton.addEventListener('click', () => {
-    divCollection[0].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
-    divCollection[1].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
-    divCollection[2].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+    for(let i = 0; i < divCollection.length; i++){
+        divCollection[i].style.backgroundColor = Math.floor(Math.random()*16777215).toString(16);
+    }
 })
