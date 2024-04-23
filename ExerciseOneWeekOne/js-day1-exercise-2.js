@@ -18,10 +18,13 @@ for(let i = 0; i < newDivCollection.length; i++){
     });
 }
 
+/*
 const outerDiv = document.getElementById("outer");
 outerDiv.addEventListener('click', (event) => {
     paragraph.innerText = event.target.id;
 });
+
+*/
 
 const submitForm = document.getElementById("submitForm");
 
@@ -67,27 +70,45 @@ let cars = [
 ];
 
 function arrayToHTMLTable(array){
-    let keys = Object.keys(array[0]);
+    //let keys = Object.keys(array[0]);
     let result = "";
-    for(let i = 0; i < keys.length; i++){
-        result += `<th>${keys[i]}</th>`
+
+    for(let key in array[0]){
+        result += `<th>${key}</th>`;
     }
+
+
+    /* for(let i = 0; i < keys.length; i++){
+        result += `<th>${keys[i]}</th>`
+    } */
+
     let header = `<tr>${result}</tr>`;
 
 
 
-    let body = array.map((x) => {
+    /* let body = array.map((x) => {
         let res = ""
         for(let i = 0; i < keys.length; i++){
             res += `<td>${Object.values(x)[i]}</td>`
         }
         res = `<tr>${res}</tr>`;
         return res;
-    })
+    }) */
 
-    let toReturn = header + body.join("");
 
-    result = `<table>${toReturn}</table>`;
+    let body = array.map((x) => {
+        let res = "";
+        for(let key in x){
+            res += `<td>${x[key]}</td>`;
+        }
+        res = `<tr>${res}</tr>`;
+        return res;
+    });
+
+
+    let combined = header + body.join("");
+
+    result = `<table>${combined}</table>`;
     return result;
 }
 
