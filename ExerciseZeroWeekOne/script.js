@@ -44,7 +44,7 @@ let priceBelow5000 = cars.filter((car) => car.price < 5000);
 priceBelow5000.forEach(console.log);
 console.log("//////////////////////////////////////////////////");
 
-//0.5:
+//0.4.2:
 
 function arrayToSQLString(array){
     let result = array.map((car) => `(${car.id},${car.year},${car.make},${car.model},${car.price})`).join(',');

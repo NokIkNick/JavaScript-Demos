@@ -18,14 +18,15 @@ for(let i = 0; i < newDivCollection.length; i++){
     });
 }
 
-/*
+
 const outerDiv = document.getElementById("outer");
 outerDiv.addEventListener('click', (event) => {
     paragraph.innerText = event.target.id;
 });
 
-*/
 
+
+//1.5
 const submitForm = document.getElementById("submitForm");
 
 
@@ -60,7 +61,7 @@ function arrayToHTMLString (array){
 };
 
 
-
+//1.6
 let cars = [
     { id: 1, year: 1997, make: 'Ford', model: 'E350', price: 3000 },
     { id: 2, year: 1999, make: 'Chevy', model: 'Venture', price: 4900 },
@@ -69,6 +70,7 @@ let cars = [
     { id: 5, year: 2005, make: 'Volvo', model: 'V70', price: 44799 }
 ];
 
+//Tried using the Object.keys method to get the keys of the object, but later found out, that there is an easier way of looping over the keys.
 function arrayToHTMLTable(array){
     //let keys = Object.keys(array[0]);
     let result = "";
@@ -115,7 +117,7 @@ function arrayToHTMLTable(array){
 
 const filterButton = document.getElementById("filterSubmit");
 
-
+//Tried throwing errors, but we haven't learned how to properly catch them yet, so I just console.log them instead.
 filterButton.addEventListener("click", (event) => {
     let input = document.getElementById("filterInput").value;
     //if(input !== Number){
