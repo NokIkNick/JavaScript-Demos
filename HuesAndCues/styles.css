@@ -1,0 +1,21 @@
+#game {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(30, 20px); /* 30 columns, each 20px wide */
+    grid-template-rows: repeat(16, 20px); /* 16 rows, each 20px high */
+    gap: 1px; /* Optional: spacing between cells */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Align cells vertically */
+    margin: 20px auto; /* Center the grid on the page */
+    background-color: black; /* Optional: grid background for contrast */
+    padding: 5px; /* Optional: padding around the grid */
+    width: 640px; /* Ensure the grid container has a defined width */
+    height: 320px; /* Ensure the grid container has a defined height */
+    border-style: solid;
+}
+
+#game div {
+    width: 20px;
+    height: 20px;
+    background-color: white; /* Default color if not assigned dynamically */
+    border: 1px solid #ddd; /* Optional: light border around cells */
+}
